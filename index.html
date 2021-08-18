@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
+    <!-- google font : Lobster -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <!-- styling internally -->
+    <style>
+        <!--element_selectors-->
+        h2 {
+            font-family: Lobster;
+        }
+
+        p {
+            font-family: monospace;
+            font-size: 16px;
+        }
+
+        <!--class_selectors-->
+        .red-text {
+            color : red;
+        }
+        <!--id_selectors-->
+        #blue-text {
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-    <h2>CatPhotoApp</h2>
+    <h2 class="red-text">CatPhotoApp</h2>
     <main>
         <a href="#"><img src="http://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
         <p>View more <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a></p>
@@ -61,7 +84,8 @@
         </form>
         <br>
     </main>
-    <footer id="footer">&copy; Copyright <a href="#">Cat Photo App</a></footer>
+    <!--inline styling : not recommended -->
+    <footer id="footer" style="font-weight: bold;">&copy; Copyright <a href="#">Cat Photo App</a></footer>
     <!-- End of the body -->
 </body>
 </html>
