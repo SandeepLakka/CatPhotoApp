@@ -4,35 +4,89 @@
     <meta charset="UTF-8">
     <title>Welcome</title>
     <!-- google font : Lobster -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
     <!-- styling internally -->
     <style>
-        <!--element_selectors-->
         h2 {
             font-family: Lobster;
         }
 
+        .image {
+            width : 300px;
+        }
         p {
             font-family: monospace;
             font-size: 16px;
         }
 
-        <!--class_selectors-->
+        .thin-gray-border {
+            border-color : rgba(125,125,125,0.5);
+            border-width: 5px;
+            border-style: solid;
+            /*
+            the above can also be written as follows
+            border: solid rgba(125,125,125,0.5) 5px;
+            */
+        }
+
         .red-text {
             color : red;
         }
-        <!--id_selectors-->
         #blue-text {
             color: blue;
+        }
+
+        .quotes * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 5px;
+        }
+        .quote {
+            font-size: medium;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-left: thick solid black;
+            background-color: lightgray;
+            padding: 5px;
+            width: 50%;
+        }
+        .quote > .quotation {
+            font-style: italic;
+            font-family: 'Indie Flower', sans-serif;
+        }
+        .quote > .quotedBy {
+            font-size: smaller;
+            text-align: right;
         }
     </style>
 </head>
 <body>
     <h2 class="red-text">CatPhotoApp</h2>
     <main>
-        <a href="#"><img src="http://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
+        <a href="#"><img class="image thin-gray-border" src="http://bit.ly/fcc-relaxing-cat" alt="A cute orange cat lying on its back."></a>
         <p>View more <a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a></p>
         <a href="#footer">Jump to bottom</a>
+
+        <div class="quotes">
+            <h5>Some famous quotes</h5>
+            <div class="quote">
+                <div class="quotation">
+                    “Cats are connoisseurs of comfort.” 
+                </div>
+                <div class="quotedBy">
+                    ― James Herriot, James Herriot's Cat Stories 
+                </div>
+            </div>
+            <div class="quote">
+                <div class="quotation">
+                    "If animals could speak, the dog would be a blundering outspoken fellow; 
+                    but the cat would have the rare grace of never saying a word too much."
+                </div>
+                <div class="quotedBy">
+                    ― Mark Twain 
+                </div>
+            </div>
+        </div>
         <p>Three things cats love:</p>
         <ul>
             <li>Cat nip</li>
